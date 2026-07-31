@@ -1,0 +1,21 @@
+---
+controller_projects:
+  - name: demo-project
+    organization: DEMO
+    scm_type: git
+    scm_url: git@github.com:bwmcintyr/cac-project.git
+    scm_branch: main
+    credential: gitea-ssh-scm
+
+controller_inventories:
+  - name: demo-inventory
+    description: demo inventory
+    organization: DEMO
+
+controller_templates:
+  - name: Hello World
+    organization: DEMO
+    job_type: run
+    inventory: demo-inventory
+    project: demo-project
+    playbook: playbooks/hello-world.yml
