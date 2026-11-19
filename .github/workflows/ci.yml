@@ -21,7 +21,7 @@ jobs:
             "object_kind": "push",
             "gitlab_project_branch": "${{ github.ref_name }}",
             "gitlab_project_name": "${{ github.event.repository.name }}",
-            "gitlab_project_url": "${{ github.event.repository.ssh_url }}.GIT"
+            "gitlab_project_url": "${{ github.event.repository.ssh_url }}"
           }
           EOF
           )
