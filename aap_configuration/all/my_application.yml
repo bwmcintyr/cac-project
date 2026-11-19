@@ -6,7 +6,13 @@ controller_projects:
     scm_url: git@github.com:bwmcintyr/cac-project.git
     scm_branch: main
     credential: github_scm
-
+  - name: ansible-playbooks
+    organization: DEMO
+    scm_type: git
+    scm_url: git@github.com:bwmcintyr/ansible-playbooks.git
+    scm_branch: main
+    credential: github_scm
+    
 controller_inventories:
   - name: demo-inventory
     description: demo inventory
