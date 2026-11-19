@@ -16,7 +16,7 @@ jobs:
       - name: Send Notification
         run: |
           curl -k -v -X POST "$TARGET_EDA_URL" \
-            -H "X-Gitlab-Token: $EDA_WEBHOOK" \
+            -H "X-Hub-Signature-256: $EDA_WEBHOOK" \
             -H "Content-Type: application/json" \
             -d "{
               \"object_kind\": \"push\",
