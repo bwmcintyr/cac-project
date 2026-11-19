@@ -11,6 +11,10 @@ controller_inventories:
   - name: demo-inventory
     description: demo inventory
     organization: DEMO
+  - name: test-inventory-github
+    description: git inventory
+    organization: DEMO
+
 
 controller_templates:
   - name: Hello World
