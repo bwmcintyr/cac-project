@@ -1,0 +1,26 @@
+name: Notify Dev EDA
+
+on:
+  push:
+    branches:
+      - dev
+      - main
+
+jobs:
+  notify-dev-eda:
+    runs-on: ubuntu-latest
+    env:
+      TARGET_EDA_URL: ${{ secrets.EDA_DEV_URL }}
+      EDA_WEBHOOK: ${{ secrets.EDA_DEV_TOKEN }}
+    steps:
+      - name: Send Notification
+        run: |
+          curl -k -v -X POST "$TARGET_EDA_URL" \
+            -H "X-Gitlab-Token: $EDA_WEBHOOK" \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"object_kind\": \"push\",
+              \"gitlab_project_branch\": \"${{ github.ref_name }}\",
+              \"gitlab_project_name\": \"${{ github.event.repository.name }}\",
+              \"gitlab_project_url\": \"${{ github.event.repository.html_url }}.GIT\"
+            }"
