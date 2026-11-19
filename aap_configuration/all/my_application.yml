@@ -5,7 +5,7 @@ controller_projects:
     scm_type: git
     scm_url: git@github.com:bwmcintyr/cac-project.git
     scm_branch: main
-    credential: gitea-ssh-scm
+    credential: github_scm
 
 controller_inventories:
   - name: demo-inventory
