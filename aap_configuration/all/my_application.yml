@@ -14,7 +14,7 @@ controller_projects:
     credential: github_scm
     
 controller_inventories:
-  - name: demo-inventory
+  - name: demo-inventory-1
     description: demo inventory
     organization: DEMO
   - name: test-inventory-github
