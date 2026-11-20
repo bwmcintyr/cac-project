@@ -1,1 +1,4 @@
-#
+controller_inventories:
+  - name: dev-inventory
+    description: for dev
+    organization: DEMO
