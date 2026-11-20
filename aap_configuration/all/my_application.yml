@@ -20,6 +20,10 @@ controller_inventories:
   - name: test-inventory-github
     description: git inventory
     organization: DEMO
+  - name: test-inventory-github-2
+    description: git inventory
+    organization: DEMO
+
 
 
 controller_templates:
